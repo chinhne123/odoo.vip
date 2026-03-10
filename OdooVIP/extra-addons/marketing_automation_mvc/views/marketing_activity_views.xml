@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Activity Form View -->
+    <record id="view_marketing_activity_form" model="ir.ui.view">
+        <field name="name">mvc.marketing.activity.form</field>
+        <field name="model">mvc.marketing.activity</field>
+        <field name="arch" type="xml">
+            <form string="Activity">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="campaign_id" required="1"/>
+                            <field name="activity_type"/>
+                        </group>
+                        <group>
+                            <field name="trigger_type"/>
+                            <label for="delay_count" string="Delay"/>
+                            <div class="o_row">
+                                <field name="delay_count"/>
+                                <field name="delay_unit" class="oe_inline"/>
+                            </div>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Activity List View -->
+    <record id="view_marketing_activity_list" model="ir.ui.view">
+        <field name="name">mvc.marketing.activity.list</field>
+        <field name="model">mvc.marketing.activity</field>
+        <field name="arch" type="xml">
+            <list string="Activities">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="activity_type"/>
+                <field name="trigger_type"/>
+            </list>
+        </field>
+    </record>
+    
+    <!-- Action -->
+    <record id="action_marketing_activity" model="ir.actions.act_window">
+        <field name="name">Activities</field>
+        <field name="res_model">mvc.marketing.activity</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_ui_custom" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.vn168.ui</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="VN168 UI" string="VN168 UI" name="vn168_ui_customizer">
+                    <block title="Giao diện VN168" id="vn168_ui_style_section">
+                        <setting title="Chỉnh màu chủ đạo" help="Thay đổi màu sắc thương hiệu của hệ thống">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="vn168_primary_color" class="col-lg-3 o_light_label"/>
+                                    <field name="vn168_primary_color" widget="color"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="vn168_navbar_color" class="col-lg-3 o_light_label"/>
+                                    <field name="vn168_navbar_color" widget="color"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="vn168_navbar_text_color" class="col-lg-3 o_light_label"/>
+                                    <field name="vn168_navbar_text_color" widget="color"/>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="vn168_button_color" class="col-lg-3 o_light_label"/>
+                                    <field name="vn168_button_color" widget="color"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_ui_custom_config_settings" model="ir.actions.act_window">
+        <field name="name">Cài đặt giao diện</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="context">{'module': 'vn168_ui_customizer'}</field>
+    </record>
+
+    <menuitem id="menu_ui_customizer_settings"
+              name="Giao diện VN168"
+              parent="base.menu_administration"
+              action="action_ui_custom_config_settings"
+              sequence="50"/>
+</odoo>

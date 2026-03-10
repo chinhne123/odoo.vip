@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_planning_root" name="VN168 Planning" sequence="10"/>
+    <menuitem id="menu_planning_plan" name="Plans" parent="menu_planning_root" action="action_planning_plan" sequence="10"/>
+    <menuitem id="menu_planning_slot" name="Schedule" parent="menu_planning_root" action="action_planning_slot" sequence="20"/>
+</odoo>

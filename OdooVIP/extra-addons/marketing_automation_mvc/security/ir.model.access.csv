@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_marketing_campaign_user,mvc.marketing.campaign.user,model_mvc_marketing_campaign,base.group_user,1,1,1,1
+access_marketing_campaign_public,mvc.marketing.campaign.public,model_mvc_marketing_campaign,base.group_public,1,0,0,0
+access_marketing_activity_user,mvc.marketing.activity.user,model_mvc_marketing_activity,base.group_user,1,1,1,1
+access_marketing_participant_user,mvc.marketing.participant.user,model_mvc_marketing_participant,base.group_user,1,1,1,1

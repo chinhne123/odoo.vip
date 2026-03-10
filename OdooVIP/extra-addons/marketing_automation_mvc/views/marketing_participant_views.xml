@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Participant Form View -->
+    <record id="view_marketing_participant_form" model="ir.ui.view">
+        <field name="name">mvc.marketing.participant.form</field>
+        <field name="model">mvc.marketing.participant</field>
+        <field name="arch" type="xml">
+            <form string="Participant">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                        </group>
+                        <group>
+                            <field name="campaign_id"/>
+                            <field name="current_activity_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Participant List View -->
+    <record id="view_marketing_participant_list" model="ir.ui.view">
+        <field name="name">mvc.marketing.participant.list</field>
+        <field name="model">mvc.marketing.participant</field>
+        <field name="arch" type="xml">
+            <list string="Participants">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="campaign_id"/>
+                <field name="state" widget="badge" decoration-success="state == 'completed'" decoration-warning="state == 'opt_out'" decoration-info="state == 'running'"/>
+            </list>
+        </field>
+    </record>
+    
+    <!-- Action -->
+    <record id="action_marketing_participant" model="ir.actions.act_window">
+        <field name="name">Participants</field>
+        <field name="res_model">mvc.marketing.participant</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    
+    <!-- Menus -->
+    <menuitem id="menu_marketing_participant" name="Participants" parent="menu_marketing_automation_root" action="action_marketing_participant" sequence="20"/>
+</odoo>

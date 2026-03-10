@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_planning_plan_user,planning.plan.user,model_planning_plan,base.group_user,1,1,1,1
+access_planning_slot_user,planning.slot.user,model_planning_slot,base.group_user,1,1,1,1

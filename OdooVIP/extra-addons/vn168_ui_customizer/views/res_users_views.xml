@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vn168_res_users_preferences_colors" model="ir.ui.view">
+        <field name="name">vn168.res.users.preferences.colors</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[1]" position="before">
+                <page string="🎨 Chỉnh màu Layout" name="vn168_colors">
+                    <group string="Thanh Navbar">
+                        <field name="vn168_navbar_color" widget="color" string="Màu nền Navbar"/>
+                        <field name="vn168_navbar_text_color" widget="color" string="Màu chữ Navbar"/>
+                    </group>
+                    <group string="Màu sắc chung">
+                        <field name="vn168_primary_color" widget="color" string="Màu chủ đạo"/>
+                        <field name="vn168_button_color" widget="color" string="Màu nút bấm"/>
+                    </group>
+                    <p class="text-muted fst-italic">
+                        Sau khi lưu, nhấn F5 để áp dụng màu mới ngay lập tức.
+                    </p>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

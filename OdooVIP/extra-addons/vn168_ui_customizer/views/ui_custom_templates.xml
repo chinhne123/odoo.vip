@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="ui_custom_style" inherit_id="web.layout">
+        <xpath expr="//head" position="inside">
+            <!-- Nhúng CSS màu sắc từ Controller (an toàn, không truy vấn DB trực tiếp) -->
+            <link rel="stylesheet" type="text/css" href="/vn168/colors.css"/>
+        </xpath>
+    </template>
+</odoo>

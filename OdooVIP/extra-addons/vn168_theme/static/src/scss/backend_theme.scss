@@ -1,0 +1,138 @@
+// VN168 Custom Backend Theme
+
+// 0. Force CSS Variables globally
+:root {
+    --o-brand-odoo: #0052cc !important;
+    --o-brand-primary: #0052cc !important;
+    --bs-primary: #0052cc !important;
+    --bs-secondary: #172b4d !important;
+    --bs-info: #2684ff !important;
+    --btn-primary-color: #ffffff !important;
+}
+
+// 0.1 White-Label: Remove Odoo Branding
+.o_sub_menu_footer,
+.o_footer_copyright,
+.o_database_list .text-center,
+.o_powered_by,
+.o_debug_manager,
+a[href*="odoo.com"],
+.o_database_list .links,
+[data-menu="odoo_account"],
+[data-menu="install_pwa"],
+.o_user_menu a[href*="odoo.com"],
+.user_menu_odoo_account,
+.dropdown-item[data-menu="odoo_account"] {
+    display: none !important;
+}
+
+// Hide "Manage databases" link on login
+.d-flex.justify-content-between.mt-2.small {
+    visibility: hidden !important;
+}
+
+// 1. Google Fonts Globally
+body,
+.o_web_client,
+.o_form_view,
+.o_list_view,
+.o_kanban_view {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+// 2. Navbar Styling (Dynamic Colors)
+.o_main_navbar {
+    background: var(--vn168-navbar-bg, #0052cc) !important;
+    border-bottom: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+
+    .o_menu_brand {
+        font-weight: 700 !important;
+        letter-spacing: 0.5px !important;
+        color: #ffffff !important;
+    }
+
+    .o_nav_entry,
+    .dropdown-toggle {
+        color: rgba(255, 255, 255, 0.9) !important;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: #ffffff !important;
+        }
+    }
+}
+
+// 3. Main Action Buttons (Primary & Secondary overrides)
+.btn-primary {
+    background-color: #0052cc !important;
+    border-color: #0052cc !important;
+    border-radius: 20px !important;
+    padding: 6px 16px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0, 82, 204, 0.2) !important;
+
+    &:hover {
+        background-color: #003d99 !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 12px rgba(0, 82, 204, 0.3) !important;
+    }
+}
+
+.btn-secondary,
+.btn-light {
+    border-radius: 20px !important;
+    transition: all 0.3s ease !important;
+
+    &:hover {
+        background-color: #e9ecef !important;
+        transform: translateY(-1px) !important;
+    }
+}
+
+// 4. Cards & Form Sheets (Glassmorphism & Rounded Corners)
+.o_form_sheet,
+.card,
+.o_kanban_record {
+    border-radius: 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.3s ease;
+}
+
+.o_kanban_record:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-2px);
+}
+
+// 5. Badges
+.badge.text-bg-success {
+    background-color: #10B981 !important; // Modern green
+    border-radius: 12px !important;
+}
+
+.badge.text-bg-warning {
+    background-color: #2684ff !important; // Secondary Blue
+    border-radius: 12px !important;
+}
+
+// 6. Control Panel (Top Search/Breadcrumb bar)
+.o_control_panel {
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid #e9ecef !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+// 7. Inputs
+.o_input {
+    border-radius: 6px !important;
+    border: 1px solid #ced4da !important;
+
+    &:focus {
+        border-color: #0052cc !important;
+        box-shadow: 0 0 0 0.2rem rgba(0, 82, 204, 0.25) !important;
+    }
+}
