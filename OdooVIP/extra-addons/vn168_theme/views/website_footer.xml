@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="vn168_custom_footer" inherit_id="website.layout" name="VN168 Custom Footer">
+        <xpath expr="//footer[@id='bottom']" position="replace">
+            <footer id="bottom" class="vn168-footer bg-light pt-5 pb-3 border-top">
+                <style>
+                    .vn168-footer a { color: #495057; text-decoration: none; }
+                    .vn168-footer a:hover { color: #0d6efd; text-decoration: underline; }
+                    .vn168-footer h5 { font-weight: 700; font-size: 16px; margin-bottom: 20px; color: #212529; text-transform: uppercase; }
+                    .vn168-footer .footer-text { font-size: 14px; color: #495057; line-height: 1.6; }
+                    .vn168-footer ul li { margin-bottom: 10px; font-size: 14px; }
+                    .vn168-footer .bottom-bar { font-size: 13px; color: #6c757d; border-top: 1px solid #dee2e6; margin-top: 30px; padding-top: 20px; }
+                    .vn168-footer .bottom-links a { color: #6c757d; margin: 0 5px; }
+                    .vn168-footer .bottom-links a:hover { color: #0d6efd; }
+                </style>
+                <div class="container">
+                    <div class="row">
+                        <!-- Cột 1: Giới thiệu công ty -->
+                        <div class="col-lg-4 col-md-12 mb-4 footer-text">
+                            <a href="/" class="mb-3 d-block">
+                                <img src="/vn168_theme/static/src/img/logo.png" alt="VN168 Logo" style="max-height: 80px; object-fit: contain;"/>
+                            </a>
+                            <p class="font-weight-bold mb-2" style="font-size: 16px; font-weight: bold; color: #011d4e;">
+                                CÔNG TY CỔ PHẦN CÔNG NGHỆ VN168
+                            </p>
+                            <p class="mb-1"><strong>Tên công ty viết bằng tiếng nước ngoài:</strong><br/>VN168 TECHNOLOGY JOINT STOCK</p>
+                            <p class="mb-1"><strong>Tên công ty viết tắt:</strong> CÔNG TY VN168</p>
+                            <p class="mb-1"><strong>Người đại diện theo pháp luật:</strong><br/>Họ và tên: BÙI THỊ HẢI</p>
+                            <p class="mb-1"><strong>Mã số doanh nghiệp:</strong> 6001807421</p>
+                            <p class="mb-3">
+                                <strong>Địa chỉ:</strong> 31 Nguyễn Nhạc, Phường Buôn Ma Thuột, Tỉnh Đăk Lăk, Việt Nam
+                            </p>
+                        </div>
+
+                        <!-- Cột 2 & 3: Menu Links -->
+                        <div class="col-lg-2 col-md-4 mb-4">
+                            <h5>Sản phẩm</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Tính năng</a></li>
+                                <li><a href="#">Bảng giá</a></li>
+                                <li><a href="#">Tích hợp</a></li>
+                            </ul>
+                            
+                            <h5 class="mt-4">Công ty</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Về chúng tôi</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="/contactus">Liên hệ</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 mb-4">
+                            <h5>Hỗ trợ</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Trung tâm trợ giúp</a></li>
+                            </ul>
+
+                            <h5 class="mt-4">Pháp lý</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Chính sách bảo mật</a></li>
+                                <li><a href="#">Điều khoản sử dụng</a></li>
+                                <li><a href="#">Chính sách cookie</a></li>
+                                <li><a href="#">Chính sách thanh toán</a></li>
+                                <li><a href="#">Chính sách giao hàng</a></li>
+                                <li><a href="#">Bảo mật</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Cột 4: Liên hệ -->
+                        <div class="col-lg-3 col-md-4 mb-4 footer-text">
+                            <h5>Liên hệ</h5>
+                            <p class="mb-2">
+                                <i class="fa fa-envelope-o text-primary mr-2"></i> <strong>Email</strong><br/>
+                                <a href="mailto:vienchuyendoisoquocgia@aivn168.com">vienchuyendoisoquocgia@aivn168.com</a>
+                            </p>
+                            <p class="mb-2">
+                                <i class="fa fa-phone text-primary mr-2"></i> <strong>Điện thoại</strong><br/>
+                                <a href="tel:0931454647">0931454647</a>
+                            </p>
+                            <p class="mb-2">
+                                <i class="fa fa-globe text-primary mr-2"></i> <strong>Website giới thiệu</strong><br/>
+                                <a href="https://vn168.vn" target="_blank">vn168.vn</a>
+                            </p>
+                            <p class="mb-0">
+                                <i class="fa fa-map-marker text-primary mr-2"></i> <strong>Địa chỉ</strong><br/>
+                                31 Nguyễn Nhạc, Phường Buôn Ma Thuột,<br/>
+                                Tỉnh Đăk Lăk, Việt Nam
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Bar -->
+                    <div class="row bottom-bar align-items-center">
+                        <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+                            © 2024 Nền tảng AI168. Đã đăng ký Bản quyền.
+                        </div>
+                        <div class="col-md-6 text-center text-md-right bottom-links">
+                            <a href="#">Pháp lý</a> •
+                            <a href="#">Chính sách bảo mật</a> •
+                            <a href="#">Điều khoản sử dụng</a> •
+                            <a href="#">Chính sách cookie</a> •
+                            <a href="#">Chính sách thanh toán</a> •
+                            <a href="#">Bảo mật</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>

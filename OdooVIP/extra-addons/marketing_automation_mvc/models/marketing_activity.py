@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields  # pyre-ignore[21]
 
 class MarketingActivity(models.Model):
     _name = 'mvc.marketing.activity'

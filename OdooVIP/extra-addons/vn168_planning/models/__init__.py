@@ -1,2 +1,2 @@
-from . import planning_plan
-from . import planning_slot
+from . import planning_plan  # pyre-ignore[21]
+from . import planning_slot  # pyre-ignore[21]

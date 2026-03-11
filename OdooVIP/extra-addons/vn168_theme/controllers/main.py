@@ -1,9 +1,9 @@
-from odoo import http
-from odoo.http import request, Response
+from odoo import http  # pyre-ignore[21]
+from odoo.http import request, Response  # pyre-ignore[21]
 import os
 
 try:
-    from odoo.addons.web.controllers.home import Home
+    from odoo.addons.web.controllers.home import Home  # pyre-ignore[21]
 except ImportError:
     Home = object
 
@@ -19,7 +19,7 @@ class VN168Branding(http.Controller):
         'static', 'src', 'img', 'logo.png'
     )
 
-    def _serve_vn168_logo(self):
+    def _serve_vn168_logo(self, content_type='image/png'):
         """Return the VN168 logo.png as a PNG image response."""
         with open(self.VN168_LOGO_PATH, 'rb') as f:
             logo_data = f.read()
@@ -27,8 +27,8 @@ class VN168Branding(http.Controller):
             logo_data,
             status=200,
             headers={
-                'Content-Type': 'image/png',
-                'Cache-Control': 'public, max-age=86400',
+                'Content-Type': content_type,
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
             }
         )
 
@@ -67,11 +67,11 @@ class VN168Branding(http.Controller):
 
     @http.route('/web/static/img/favicon.ico', type='http', auth='none')
     def odoo_favicon(self, **kw):
-        return self._serve_vn168_logo()
+        return self._serve_vn168_logo('image/x-icon')
 
     @http.route('/web/binary/favicon', type='http', auth='none')
     def odoo_binary_favicon(self, **kw):
-        return self._serve_vn168_logo()
+        return self._serve_vn168_logo('image/x-icon')
 
     @http.route('/web/binary/company_logo', type='http', auth='none')
     def odoo_company_logo(self, **kw):
@@ -93,8 +93,8 @@ class VN168Home(Home):
         if not request.db:
             return request.redirect('/web/database/selector')
         if hasattr(super(), 'web_client'):
-            return super().web_client(s_action=s_action, **kw)
-        return Home.web_client(self, s_action=s_action, **kw)
+            return super().web_client(s_action=s_action, **kw)  # pyre-ignore[16]
+        return Home.web_client(self, s_action=s_action, **kw)  # pyre-ignore[16]
 
     @http.route(['/odoo', '/odoo/<path:subpath>'], type='http', auth="none")
     def web_client(self, s_action=None, **kw):
@@ -105,5 +105,5 @@ class VN168Home(Home):
                 new_path += '?' + query_string
             return request.redirect(new_path, code=301)
         if hasattr(super(), 'web_client'):
-            return super().web_client(s_action=s_action, **kw)
-        return Home.web_client(self, s_action=s_action, **kw)
+            return super().web_client(s_action=s_action, **kw)  # pyre-ignore[16]
+        return Home.web_client(self, s_action=s_action, **kw)  # pyre-ignore[16]
