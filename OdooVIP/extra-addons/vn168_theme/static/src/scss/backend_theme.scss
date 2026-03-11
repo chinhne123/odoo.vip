@@ -136,3 +136,13 @@ body,
         box-shadow: 0 0 0 0.2rem rgba(0, 82, 204, 0.25) !important;
     }
 }
+
+// 8. Logo Size Constraints
+.o_main_navbar .o_menu_brand img,
+.o_header_standard img,
+.navbar-brand img,
+img.o_company_logo {
+    max-height: 60px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}

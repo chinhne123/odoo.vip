@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api  # pyre-ignore[21]
 
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'

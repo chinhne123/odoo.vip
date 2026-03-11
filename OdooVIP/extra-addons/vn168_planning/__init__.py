@@ -1,1 +1,1 @@
-from . import models
+from . import models  # pyre-ignore[21]

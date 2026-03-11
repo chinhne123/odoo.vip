@@ -13,7 +13,7 @@
     'author': 'VN168 Tech Team',
     'website': 'https://vn168.vn',
     'license': 'LGPL-3',
-    'depends': ['web'],
+    'depends': ['web', 'website'],
     'assets': {
         'web._assets_primary_variables': [
             ('prepend', 'vn168_theme/static/src/scss/primary_variables.scss'),
@@ -26,6 +26,7 @@
 
     'data': [
         'views/web_layout_branding.xml',
+        'views/website_footer.xml',
     ],
     'installable': True,
     'application': False,
